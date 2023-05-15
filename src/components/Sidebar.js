@@ -1,15 +1,45 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Sidebar = () => {
-  return (
-    <div className='col-span-1 shadow-lg p-2'>
-      <h1 className='text-lg font-bold'>Subscriptions</h1>
-      <ul>
-        <li>Music</li>
-        <li>Sports</li>
-        <li>Gaming</li>
-        <li>Movies</li>
-      </ul>
+  const isMenuOpen = useSelector((store) =>store.app.isMenuOpen )
+  return !isMenuOpen ? null : (
+    <div className=' shadow-lg p-2 w-48'>
+      <div>
+        <ul>
+          <li className="cursor-pointer">Home</li>
+          <li className="cursor-pointer">Shorts</li>
+          <li className="cursor-pointer">Videos</li>
+          <li className="cursor-pointer">Live</li>
+        </ul>
+      </div>
+      <div>
+        <h1 className="font-bold pt-5">Subscriptions</h1>
+        <ul>
+          <li className="cursor-pointer">Music</li>
+          <li className="cursor-pointer">Sports</li>
+          <li className="cursor-pointer">Gaming</li>
+          <li className="cursor-pointer">Movies</li>
+        </ul>
+      </div>
+      <div>
+        <h1 className="font-bold pt-5">Watch Later</h1>
+        <ul>
+          <li className="cursor-pointer">Music</li>
+          <li className="cursor-pointer">Sports</li>
+          <li className="cursor-pointer">Gaming</li>
+          <li className="cursor-pointer">Movies</li>
+        </ul>
+      </div>
+      <div>
+        <h1 className='font-bold'>Subscriptions</h1>
+        <ul>
+          <li className="cursor-pointer">Music</li>
+          <li className="cursor-pointer">Sports</li>
+          <li className="cursor-pointer">Gaming</li>
+          <li className="cursor-pointer hover:bg-gray-200 p-1 rounded-full">Movies</li>
+        </ul>
+      </div>
     </div>
   )
 }
