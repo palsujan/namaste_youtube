@@ -19,11 +19,11 @@ const Head = () => {
             src="https://static.vecteezy.com/system/resources/previews/002/292/406/original/hamburger-menu-line-icon-free-vector.jpg"
             alt="menu"
           />
-          <img 
+          <a href='/'><img 
             className="h-8 mx-2 cursor-pointer"
             src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
             alt="Youtube_logo"
-          />
+          /></a>
       </div>
       <div className='col-span-10'>
           <input className='w-1/2 px-10 border border-gray-400 p-2 rounded-l-full' type="text" placeholder='Search'/>
